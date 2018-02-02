@@ -1,3 +1,4 @@
+#include "STQLog.h"
 #include "STQTools.h"
 
 int *STQ_generating_random_number_int(int min, int max, int len) {
@@ -106,12 +107,12 @@ inline void STQ_swap_int(int *a, int *b) {
 }
 
 void STQ_for_each_int(int * arr, int len) {
-	printf("{");
+	printf(NONE "{");
 	for (int i = 0; i < len-1; ++i)
 	{	
-		printf("%d, ", arr[i]);
+		printf(NONE "%d, ", arr[i]);
 	}
-	printf("%d}\n", arr[len-1]);
+	printf(NONE "%d}\n", arr[len-1]);
 }
 
 inline void STQ_set_clock(struct timeval *clk) {

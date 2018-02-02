@@ -1,3 +1,4 @@
+#include "STQLog.h"
 #include "STQDataStruct.h"
 #include "STQSort.h"
 

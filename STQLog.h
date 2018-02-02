@@ -35,7 +35,7 @@
 #define STQ_LOGD(TAG,format,...) \
 		{ \
 			if(STQ_DEBUG) \
-				STQ_LOG_LIGHT_BLUE(TAG,format,##__VA_ARGS__); \
+				STQ_LOG_NONE(TAG,format,##__VA_ARGS__); \
 		} \
 
 #define STQ_LOGM(TAG,format,...) STQ_LOG_LIGHT_CYAN(TAG,format,##__VA_ARGS__)

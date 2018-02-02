@@ -86,7 +86,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %lf - sec\n", STQ_get_diff_sec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %lf - sec\n", STQ_get_diff_sec(&stq_start, &stq_end)); \
 	} \
 
 #define PRINTF_VOID_FUN_TIME_MSEC(name, arg1, ...) \
@@ -94,7 +94,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %ld - msec\n", STQ_get_diff_msec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %ld - msec\n", STQ_get_diff_msec(&stq_start, &stq_end)); \
 	} \
 
 #define PRINTF_VOID_FUN_TIME_USEC(name, arg1, ...) \
@@ -102,7 +102,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %ld - usec\n", STQ_get_diff_usec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %ld - usec\n", STQ_get_diff_usec(&stq_start, &stq_end)); \
 	} \
 
 #define PRINTF_FREE_FUN_TIME_SEC(name, tmp, arg1, ...) \
@@ -110,7 +110,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		tmp = name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %lf - sec\n", STQ_get_diff_sec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %lf - sec\n", STQ_get_diff_sec(&stq_start, &stq_end)); \
 	} \
 
 #define PRINTF_FREE_FUN_TIME_MSEC(name, tmp, arg1, ...) \
@@ -118,7 +118,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		tmp = name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %ld - msec\n", STQ_get_diff_msec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %ld - msec\n", STQ_get_diff_msec(&stq_start, &stq_end)); \
 	} \
 
 #define PRINTF_FREE_FUN_TIME_USEC(name, tmp, arg1,...) \
@@ -126,7 +126,7 @@ struct timeval stq_start, stq_end;
 		STQ_set_clock(&stq_start); \
 		tmp = name(arg1, ## __VA_ARGS__); \
 		STQ_set_clock(&stq_end); \
-		printf("["#name"] %ld - usec\n", STQ_get_diff_usec(&stq_start, &stq_end)); \
+		printf(NONE "["#name"] %ld - usec\n", STQ_get_diff_usec(&stq_start, &stq_end)); \
 	} \
 
 #endif // STQ_TOOLS_H
